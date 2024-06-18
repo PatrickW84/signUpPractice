@@ -20,7 +20,7 @@ export default function Authenticate({ token }) {
       );
       const result = await response.json();
       setSuccessMessage(result.message);
-      setUsername(result.username); // get username from data property
+      setUsername(result.data.username); // get username from data property
     } catch (error) {
       setError(error.message);
     }
